@@ -93,11 +93,14 @@ class _ScanSuccessState extends State<ScanSuccess> {
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Center(
-                  child: Text(
-                    widget.qrInfo,
-                    style: const TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                  child: FittedBox(
+                    fit: BoxFit.fitWidth,
+                    child: Text(
+                      widget.qrInfo,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),

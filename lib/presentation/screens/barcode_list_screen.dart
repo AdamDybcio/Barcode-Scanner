@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/button_widget.dart';
+import '../widgets/start_scanning_button_widget.dart';
 import '../widgets/barcode_list_widget.dart';
 
 class BarcodeListScreen extends StatefulWidget {

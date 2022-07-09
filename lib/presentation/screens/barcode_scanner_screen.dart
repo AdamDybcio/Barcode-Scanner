@@ -12,6 +12,10 @@ class BarcodeScanner extends StatefulWidget {
 }
 
 class _BarcodeScannerState extends State<BarcodeScanner> {
+  Color borderColor = Colors.orange;
+  double strokeWidth = 3;
+  String upperText = 'Zeskanuj barkod';
+  Color upperColor = Colors.white;
   late String code;
   String? _qrInfo = 'Zrób skan barkodu';
   bool _camState = false;
@@ -60,18 +64,35 @@ class _BarcodeScannerState extends State<BarcodeScanner> {
                         style: const TextStyle(color: Colors.red),
                       ),
                       qrCodeCallback: (code) {
-                        _qrCallback(code);
+                        upperText = 'Sukces!';
+                        upperColor = Colors.greenAccent;
+                        borderColor = Colors.greenAccent;
+                        strokeWidth = 6;
+                        setState(() {});
+                        Future.delayed(
+                          const Duration(milliseconds: 1500),
+                        ).then(
+                          (_) {
+                            _qrCallback(code);
+                          },
+                        );
                       },
                     ),
-                    const Center(
+                    Center(
                       child: Padding(
-                        padding: EdgeInsets.only(bottom: 400),
+                        padding: const EdgeInsets.only(bottom: 400),
                         child: Text(
-                          'Zeskanuj barkod',
+                          upperText,
                           style: TextStyle(
-                            color: Colors.white,
+                            color: upperColor,
+                            shadows: const [
+                              Shadow(
+                                color: Colors.black,
+                                offset: Offset(2, 2),
+                              )
+                            ],
                             fontSize: 20,
-                            fontWeight: FontWeight.w300,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),
@@ -79,9 +100,9 @@ class _BarcodeScannerState extends State<BarcodeScanner> {
                     Center(
                       child: DottedBorder(
                         borderType: BorderType.RRect,
-                        strokeWidth: 3,
+                        strokeWidth: strokeWidth,
                         dashPattern: const [10, 10],
-                        color: Colors.orange,
+                        color: borderColor,
                         radius: const Radius.circular(20),
                         child: Container(
                           height: 250,

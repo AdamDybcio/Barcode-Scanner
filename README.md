@@ -1,8 +1,16 @@
 # Barcode App
 
-Just simple Barcode Scanner App.
-The user can read the barcodes with a reader. After reading the barcode, the user can decide whether to save it or not. After saving, the barcode appears in the list. The user can remove the barcode (then the snackbar also pops up). The list of barcodes and dates are saved in the device memory, thanks to which it is not cleaned after each application restart. (Hydrated BLoC, not SharedPreferences!!!)
+[PL]
+Jest to prosta aplikacja do skanowania barkodów. Na stronie głównej użytkownikowi wyświetla się lista barkodów (lub informacja o ich braku). Każdy element listy zawiera barkod oraz datę jego wykonania, począwszy od najnowszego skanu. Na dole jest przycisk, który przenosi użytkownika na drugą stronę, gdzie użytkownik może zeskanować barkod. Po najechaniu aparatem na barkod, ramka oraz napis na ekranie zmienią kolor na zielony, po czym po chwili użytkownikowi wyświetla się okienko o wykonanym skanie. Może go odrzucić, bądź też zaakceptować, a co za tym idzie - dodać do listy. (WAŻNE! Nie można zapisać do listy dwa razy tego samego barkodu. Jest to pewne zabezpieczenie.) Użytkownik może usunąć również barkod z listy wyświetlanej na głównej stronie poprzez przesunięcie całego elementu listy w lewo. Przy przesunięciu wyświetli się AlertDialog w celu potwierdzenia przez użytkownika usunięcia danego barkodu z listy (zabezpieczenie). Oczywiście stan listy jest zapisywany i odtwarzany po wyłączeniu i włączeniu aplikacji (WAŻNE! Do tego nie była wykorzystywana biblioteka shared_preferences, lecz hydrated_bloc oraz path_provider, ponieważ uważałem to za lepszy wybór w tej konkretnej aplikacji).
 
-## Video preview
+[EN]
+It is a simple barcode scanning application. On the home page, the user is presented with a list of barcodes (or information about their absence). Each list item contains a barcode and the date it was executed, starting with the most recent scan. There is a button at the bottom that takes the user to the other screen where the user can scan the barcode. After hovering the camera over the barcode, the frame and the text above on the screen will change to green, and after a while window about the successful scan is displayed. The user can reject it, or accept it, and thus - add it to the list. (IMPORTANT! You cannot add the same barcode twice to the list. This is a security measure.) You can also remove a barcode from the list displayed on the home page by swiping the entire list item to the left. AlertDialog will be displayed on the swipe for the user to confirm that he wants the barcode to be removed from the list (security). Of course, the list state is saved and restored when the application is turned off and on (IMPORTANT! For this the shared_preferences library was not used, but hydrated_bloc and path_provider, because I thought it was a better choice in this particular application).
 
-https://user-images.githubusercontent.com/68535467/178105357-1873de8e-b971-4b55-84b1-a4547bbf0e7c.mp4
+## Krótkie wideo z działania aplikacji / A short video on how the application works
+
+https://user-images.githubusercontent.com/68535467/178116768-04b50faa-5df3-44da-9f15-47af03c7cb5c.mp4
+
+## Screenshots
+
+<img src="https://user-images.githubusercontent.com/68535467/178116798-fdfc8f94-007d-47ee-a28a-4e7fa0e9deb5.jpg" width="320" height="720">     <img src="https://user-images.githubusercontent.com/68535467/178116800-6e40e3e0-7509-42ba-bf2a-7a48bd115bb2.jpg" width="320" height="720">     <img src="https://user-images.githubusercontent.com/68535467/178116803-e51ea8f6-26c7-4752-9220-3da8a96f71df.jpg" width="320" height="720">
+<img src="https://user-images.githubusercontent.com/68535467/178116799-f78d04ee-3bcb-4d22-984a-e25c2d26190b.jpg" width="320" height="720">     <img src="https://user-images.githubusercontent.com/68535467/178116802-9404a6b4-7ffa-42b9-b1ec-e8319f5a2c4a.jpg" width="320" height="720">     <img src="https://user-images.githubusercontent.com/68535467/178116805-cd811f0c-2545-4430-be60-483e79fd438c.jpg" width="320" height="720">

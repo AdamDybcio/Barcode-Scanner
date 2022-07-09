@@ -5,16 +5,11 @@ import '../../logic/cubit/barcode_list_cubit.dart';
 import './empty_barcode_list.dart';
 import './barcodes_widget.dart';
 
-class BarcodeList extends StatefulWidget {
+class BarcodeList extends StatelessWidget {
   const BarcodeList({
     Key? key,
   }) : super(key: key);
 
-  @override
-  State<BarcodeList> createState() => _BarcodeListState();
-}
-
-class _BarcodeListState extends State<BarcodeList> {
   @override
   Widget build(BuildContext context) {
     return Builder(builder: (context) {

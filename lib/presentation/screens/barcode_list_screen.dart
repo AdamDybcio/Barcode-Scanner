@@ -3,14 +3,9 @@ import 'package:flutter/material.dart';
 import '../widgets/start_scanning_button_widget.dart';
 import '../widgets/barcode_list_widget.dart';
 
-class BarcodeListScreen extends StatefulWidget {
+class BarcodeListScreen extends StatelessWidget {
   const BarcodeListScreen({Key? key}) : super(key: key);
 
-  @override
-  State<BarcodeListScreen> createState() => _BarcodeListScreenState();
-}
-
-class _BarcodeListScreenState extends State<BarcodeListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

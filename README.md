@@ -1,16 +1,8 @@
-# barcode_app
+# Barcode App
 
-A new Flutter project.
+Just simple Barcode Scanner App.
+The user can read the barcodes with a reader. After reading the barcode, the user can decide whether to save it or not. After saving, the barcode appears in the list. The user can remove the barcode (then the snackbar also pops up). The list of barcodes and dates are saved in the device memory, thanks to which it is not cleaned after each application restart. (Hydrated BLoC, not SharedPreferences!!!)
 
-## Getting Started
+## Video preview
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://user-images.githubusercontent.com/68535467/178105357-1873de8e-b971-4b55-84b1-a4547bbf0e7c.mp4
